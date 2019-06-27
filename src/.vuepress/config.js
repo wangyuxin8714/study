@@ -81,7 +81,8 @@ module.exports = {
               { text: 'Webpack', link: '/zh/webpack/'},
               { text: '悦读管理后台', link: '/zh/interface/Yuedu.md'},
               { text: 'BlackMarket', link: '/zh/interface/BlackMarket.md'},
-              { text: 'TouTiao', link: '/zh/interface/TouTiao.md'}
+              { text: 'TouTiao', link: '/zh/interface/TouTiao.md'},
+              { text: 'jsx', link: '/zh/jsx/jsx.md'},
             ]
           },
           // {
