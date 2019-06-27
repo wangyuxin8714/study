@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JS | 前端知识点总结</title>
+    <meta name="description" content="任何不能够给你快乐的编程都是耍流氓">
+    <link rel="icon" href="/study/logo.png">
+  <link rel="manifest" href="/study/manifest.json">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/study/icons/apple-touch-icon-152x152.png">
+  <link rel="mask-icon" href="/study/icons/safari-pinned-tab.svg" color="#3eaf7c">
+  <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/study/assets/css/styles.0fae91fa.css" as="style"><link rel="preload" href="/study/assets/js/app.0fae91fa.js" as="script"><link rel="preload" href="/study/assets/js/23.17305bc1.js" as="script"><link rel="prefetch" href="/study/assets/css/1.styles.5f0580cb.css"><link rel="prefetch" href="/study/assets/css/2.styles.cf411bf2.css"><link rel="prefetch" href="/study/assets/css/3.styles.f8df33c5.css"><link rel="prefetch" href="/study/assets/css/4.styles.144395b8.css"><link rel="prefetch" href="/study/assets/css/5.styles.68a24465.css"><link rel="prefetch" href="/study/assets/css/6.styles.5850bb57.css"><link rel="prefetch" href="/study/assets/css/7.styles.fe8d468f.css"><link rel="prefetch" href="/study/assets/js/1.5f0580cb.js"><link rel="prefetch" href="/study/assets/js/10.49f015e1.js"><link rel="prefetch" href="/study/assets/js/11.913d5f81.js"><link rel="prefetch" href="/study/assets/js/12.f418fb85.js"><link rel="prefetch" href="/study/assets/js/13.73324539.js"><link rel="prefetch" href="/study/assets/js/14.0750090b.js"><link rel="prefetch" href="/study/assets/js/15.20e49b53.js"><link rel="prefetch" href="/study/assets/js/16.4a91fa79.js"><link rel="prefetch" href="/study/assets/js/17.6dc5228b.js"><link rel="prefetch" href="/study/assets/js/18.b6736f5e.js"><link rel="prefetch" href="/study/assets/js/19.1652316f.js"><link rel="prefetch" href="/study/assets/js/2.cf411bf2.js"><link rel="prefetch" href="/study/assets/js/20.261a84a6.js"><link rel="prefetch" href="/study/assets/js/21.2c1a5844.js"><link rel="prefetch" href="/study/assets/js/22.fad9c951.js"><link rel="prefetch" href="/study/assets/js/24.43889040.js"><link rel="prefetch" href="/study/assets/js/25.635977d6.js"><link rel="prefetch" href="/study/assets/js/26.c1f71250.js"><link rel="prefetch" href="/study/assets/js/27.bafb9df1.js"><link rel="prefetch" href="/study/assets/js/28.b7b69518.js"><link rel="prefetch" href="/study/assets/js/29.4d163fda.js"><link rel="prefetch" href="/study/assets/js/3.f8df33c5.js"><link rel="prefetch" href="/study/assets/js/30.8847ef8a.js"><link rel="prefetch" href="/study/assets/js/31.e2d1dd7d.js"><link rel="prefetch" href="/study/assets/js/32.32e5f86b.js"><link rel="prefetch" href="/study/assets/js/33.340cf694.js"><link rel="prefetch" href="/study/assets/js/34.66ea9c96.js"><link rel="prefetch" href="/study/assets/js/35.0acd8880.js"><link rel="prefetch" href="/study/assets/js/36.8cda2854.js"><link rel="prefetch" href="/study/assets/js/37.9e2f9069.js"><link rel="prefetch" href="/study/assets/js/38.2362f433.js"><link rel="prefetch" href="/study/assets/js/39.c5f943be.js"><link rel="prefetch" href="/study/assets/js/4.144395b8.js"><link rel="prefetch" href="/study/assets/js/40.dd25e152.js"><link rel="prefetch" href="/study/assets/js/41.3c4ac568.js"><link rel="prefetch" href="/study/assets/js/42.967e069e.js"><link rel="prefetch" href="/study/assets/js/43.3f878992.js"><link rel="prefetch" href="/study/assets/js/44.4263ca57.js"><link rel="prefetch" href="/study/assets/js/45.8ac62d6b.js"><link rel="prefetch" href="/study/assets/js/46.1bb14c08.js"><link rel="prefetch" href="/study/assets/js/47.73b94eab.js"><link rel="prefetch" href="/study/assets/js/48.4703ed72.js"><link rel="prefetch" href="/study/assets/js/49.b07b4bdf.js"><link rel="prefetch" href="/study/assets/js/5.68a24465.js"><link rel="prefetch" href="/study/assets/js/50.6d47d070.js"><link rel="prefetch" href="/study/assets/js/51.44953c82.js"><link rel="prefetch" href="/study/assets/js/52.c87afbc3.js"><link rel="prefetch" href="/study/assets/js/53.cb08198e.js"><link rel="prefetch" href="/study/assets/js/54.d3f6cfbb.js"><link rel="prefetch" href="/study/assets/js/55.d30fd092.js"><link rel="prefetch" href="/study/assets/js/56.84ee99cd.js"><link rel="prefetch" href="/study/assets/js/57.a4b41967.js"><link rel="prefetch" href="/study/assets/js/58.ff4c8199.js"><link rel="prefetch" href="/study/assets/js/59.7ea80669.js"><link rel="prefetch" href="/study/assets/js/6.5850bb57.js"><link rel="prefetch" href="/study/assets/js/60.20fa65c1.js"><link rel="prefetch" href="/study/assets/js/61.e3fe6a3d.js"><link rel="prefetch" href="/study/assets/js/62.3fa7e020.js"><link rel="prefetch" href="/study/assets/js/63.c1385cee.js"><link rel="prefetch" href="/study/assets/js/64.a4ecce86.js"><link rel="prefetch" href="/study/assets/js/65.3d5a3008.js"><link rel="prefetch" href="/study/assets/js/66.23032171.js"><link rel="prefetch" href="/study/assets/js/67.33b2734f.js"><link rel="prefetch" href="/study/assets/js/68.850c4320.js"><link rel="prefetch" href="/study/assets/js/69.8f5d7158.js"><link rel="prefetch" href="/study/assets/js/7.fe8d468f.js"><link rel="prefetch" href="/study/assets/js/70.3b824a50.js"><link rel="prefetch" href="/study/assets/js/71.571815d8.js"><link rel="prefetch" href="/study/assets/js/72.bb52df6a.js"><link rel="prefetch" href="/study/assets/js/73.760271f9.js"><link rel="prefetch" href="/study/assets/js/74.cf85dd0e.js"><link rel="prefetch" href="/study/assets/js/75.95ae97fb.js"><link rel="prefetch" href="/study/assets/js/76.ecf941bb.js"><link rel="prefetch" href="/study/assets/js/77.ee5fecc7.js"><link rel="prefetch" href="/study/assets/js/78.2edf737c.js"><link rel="prefetch" href="/study/assets/js/79.c391ce23.js"><link rel="prefetch" href="/study/assets/js/8.1948f17b.js"><link rel="prefetch" href="/study/assets/js/9.e409832b.js">
+    <link rel="stylesheet" href="/study/assets/css/styles.0fae91fa.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/study/" class="home-link router-link-active"><!----> <span class="site-name">前端知识点总结</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/study/zh/standard/Start.html" class="nav-link">快速搭建开发环境</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/algorithm/Charpter4.html" class="nav-link">编程基本功</a></li><li class="dropdown-item"><!----> <a href="/study/zh/algorithm/Charpter5.html" class="nav-link">数学趣题(一)</a></li><li class="dropdown-item"><!----> <a href="/study/zh/algorithm/Charpter6.html" class="nav-link">数学趣题(二)</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">项目相关</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/standard/Standard.html" class="nav-link">前端规范</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Project.html" class="nav-link">项目流程</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Cooperation.html" class="nav-link">前后端交互</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Compatibility.html" class="nav-link">移动端兼容问题</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Improve.html" class="nav-link">项目优化</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Cache.html" class="nav-link">浏览器缓存</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Spa.html" class="nav-link">单页面应用</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">知名公司面试题</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/interview/index.html" class="nav-link">面试必看</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/ali.html" class="nav-link">阿里巴巴</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/longhu.html" class="nav-link">龙湖地产</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">知识点笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/interface/Mind.html" class="nav-link">在线思维导图</a></li><li class="dropdown-item"><!----> <a href="/study/zh/vue/" class="nav-link">Vue</a></li><li class="dropdown-item"><!----> <a href="/study/zh/react/" class="nav-link">React</a></li><li class="dropdown-item"><!----> <a href="/study/zh/miniapp/" class="nav-link">小程序</a></li><li class="dropdown-item"><!----> <a href="/study/zh/webpack/" class="nav-link">Webpack</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interface/Yuedu.html" class="nav-link">悦读管理后台</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interface/BlackMarket.html" class="nav-link">BlackMarket</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interface/TouTiao.html" class="nav-link">TouTiao</a></li><li class="dropdown-item"><!----> <a href="/study/zh/jsx/jsx.html" class="nav-link">jsx</a></li><li class="dropdown-item"><!----> <a href="/study/zh/bwbj/jsup.html" class="nav-link router-link-exact-active router-link-active">js上</a></li></ul></div></div> <a href="https://github.com/jasonandjay/study" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/study/zh/standard/Start.html" class="nav-link">快速搭建开发环境</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">算法</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/algorithm/Charpter4.html" class="nav-link">编程基本功</a></li><li class="dropdown-item"><!----> <a href="/study/zh/algorithm/Charpter5.html" class="nav-link">数学趣题(一)</a></li><li class="dropdown-item"><!----> <a href="/study/zh/algorithm/Charpter6.html" class="nav-link">数学趣题(二)</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">项目相关</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/standard/Standard.html" class="nav-link">前端规范</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Project.html" class="nav-link">项目流程</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Cooperation.html" class="nav-link">前后端交互</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Compatibility.html" class="nav-link">移动端兼容问题</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Improve.html" class="nav-link">项目优化</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Cache.html" class="nav-link">浏览器缓存</a></li><li class="dropdown-item"><!----> <a href="/study/zh/standard/Spa.html" class="nav-link">单页面应用</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">知名公司面试题</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/interview/index.html" class="nav-link">面试必看</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/ali.html" class="nav-link">阿里巴巴</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interview/longhu.html" class="nav-link">龙湖地产</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">知识点笔记</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/study/zh/interface/Mind.html" class="nav-link">在线思维导图</a></li><li class="dropdown-item"><!----> <a href="/study/zh/vue/" class="nav-link">Vue</a></li><li class="dropdown-item"><!----> <a href="/study/zh/react/" class="nav-link">React</a></li><li class="dropdown-item"><!----> <a href="/study/zh/miniapp/" class="nav-link">小程序</a></li><li class="dropdown-item"><!----> <a href="/study/zh/webpack/" class="nav-link">Webpack</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interface/Yuedu.html" class="nav-link">悦读管理后台</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interface/BlackMarket.html" class="nav-link">BlackMarket</a></li><li class="dropdown-item"><!----> <a href="/study/zh/interface/TouTiao.html" class="nav-link">TouTiao</a></li><li class="dropdown-item"><!----> <a href="/study/zh/jsx/jsx.html" class="nav-link">jsx</a></li><li class="dropdown-item"><!----> <a href="/study/zh/bwbj/jsup.html" class="nav-link router-link-exact-active router-link-active">js上</a></li></ul></div></div> <a href="https://github.com/jasonandjay/study" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav> <div class="carbon-ads"></div> <!----> </div> <div class="page"> <div class="content"><h1 id="js"><a href="#js" aria-hidden="true" class="header-anchor">#</a> JS</h1> <p>组成部分：</p> <ul><li>Dom  文档对象模型</li> <li>Bom   浏览器对象模型</li> <li>ECMAscript  核心</li></ul> <p>js起源 javascript==&gt;布兰登艾奇 面向对象的语言 脚本语言</p> <p>js作用：可以和页面做交互</p> <h5 id="常量与变量"><a href="#常量与变量" aria-hidden="true" class="header-anchor">#</a> 常量与变量</h5> <p>1.常量:在程序执行过程中其值不可以改变的量</p> <p>2.变量：在程序执行过程中其值可以改变的量,多个变量可以在一起定义,中间以逗号分隔</p> <div class="language- extra-class"><pre class="language-text"><code>var a=1，b='str';
+</code></pre></div><p>定义变量结构：</p> <p>-关键字：var<br>
+-结构： var 变量名=变量值 //js 弱类型语言</p> <p>var 可以省略 加var可以使变量具有变量声明提升的作用</p> <p>变量在使用之前 必须先定义  如果变量名相同 后定义的覆盖定义的</p> <h3 id="js两大类"><a href="#js两大类" aria-hidden="true" class="header-anchor">#</a> js两大类</h3> <p>数据类型：number string boolean null undefined object</p> <h4 id="_5种基本数据类型"><a href="#_5种基本数据类型" aria-hidden="true" class="header-anchor">#</a> 5种基本数据类型</h4> <h5 id="number-数值-整型、浮点型统称为number类型"><a href="#number-数值-整型、浮点型统称为number类型" aria-hidden="true" class="header-anchor">#</a> number 数值 ==&gt;整型、浮点型统称为number类型</h5> <div class="language- extra-class"><pre class="language-text"><code>   NaN not a Number 不是一个数值 是Number类型的一种
+   console.log(3-'abc')  //NaN
+   console.log(typeof NaN)  //number
+
+   isNaN() 判断一个值是否是非数值 返回值为 布尔型 
+   console.log(isNaN(3))  //false
+   console.log(isNaN('XYZ'))  //true
+</code></pre></div><h5 id="string-字符串-被一对单引号或双引号包含的内容-引号必须成对出现"><a href="#string-字符串-被一对单引号或双引号包含的内容-引号必须成对出现" aria-hidden="true" class="header-anchor">#</a> string 字符串==&gt;被一对单引号或双引号包含的内容==&gt;引号必须成对出现</h5> <p>字符串拼接</p> <div class="language- extra-class"><pre class="language-text"><code>console.log() //控制台打印
+document.write() //页面中打印文本或标签
+</code></pre></div><p>张三今年18岁,性别男。要求：年龄和性别用变量表示，年龄加粗，性别斜体，在页面中打印出来</p> <div class="language- extra-class"><pre class="language-text"><code>var age=18,sex='男';
+</code></pre></div><p>ES5 字符串拼接: 将非变量部分用引号包起来,如果拼接变量 则用'+'做连接符</p> <div class="language- extra-class"><pre class="language-text"><code>document.write('张三今年&lt;b&gt;'+age+&quot;&lt;/b&gt;岁,性别&lt;em&gt;&quot;+sex+'&lt;/em&gt;');
+</code></pre></div><p>ES6 字符串拼接 :</p> <div class="language- extra-class"><pre class="language-text"><code>document.write(`张三今年&lt;b&gt;${age}&lt;/b&gt;岁,性别&lt;em&gt;${sex}&lt;/em&gt;`);
+document.write(&quot;&lt;img src='a.png'&gt;&quot;);//ES5
+document.write(`&lt;img src=a.png&gt;`);//ES6
+</code></pre></div><h5 id="null-空类型-空指针对象-他是一种特殊的对象-对象占位符"><a href="#null-空类型-空指针对象-他是一种特殊的对象-对象占位符" aria-hidden="true" class="header-anchor">#</a> null   空类型==&gt; 空指针对象 他是一种特殊的对象(对象占位符)</h5> <h5 id="undefined-未定义类型-如果定义了变量-没有赋值-则默认保存undefined"><a href="#undefined-未定义类型-如果定义了变量-没有赋值-则默认保存undefined" aria-hidden="true" class="header-anchor">#</a> undefined 未定义类型==&gt;=如果定义了变量 没有赋值 则默认保存undefined</h5> <div class="language- extra-class"><pre class="language-text"><code>var x;
+console.log(x) //undefined
+</code></pre></div><h5 id="boolean-布尔型-只有两个值-true（对）-false（错）"><a href="#boolean-布尔型-只有两个值-true（对）-false（错）" aria-hidden="true" class="header-anchor">#</a> boolean  布尔型 只有两个值: true（对） false（错）</h5> <h4 id="复杂数据类型-函数、数组、对象-object"><a href="#复杂数据类型-函数、数组、对象-object" aria-hidden="true" class="header-anchor">#</a> 复杂数据类型  函数、数组、对象 object</h4> <h3 id="typeof"><a href="#typeof" aria-hidden="true" class="header-anchor">#</a> typeof</h3> <p>typeof 的返回值有6种:
+number string undefined boolean object function</p> <p>语法结构：</p> <ul><li>typeof（被检测的内容）</li> <li>typeof空格 被检测的内容</li> <li>typeof 返回值为 string类型</li></ul> <div class="language- extra-class"><pre class="language-text"><code>console.log();//在控制台打印 方便调试代码
+console.log(typeof 123);  //'number'
+console.log(typeof &quot;xyz&quot;);  //'string'
+console.log(typeof undefined);  //'undefined'
+console.log(typeof false);  //'boolean'
+console.log(typeof null);  //'object'
+console.log(typeof typeof 123);  //'string'
+console.log(typeof typeof undefined);  //'string'
+</code></pre></div><h3 id="命名规范"><a href="#命名规范" aria-hidden="true" class="header-anchor">#</a> 命名规范</h3> <p>js中严格区分大小写</p> <div class="language- extra-class"><pre class="language-text"><code>var sum,Sum,SUM; //在内存中占着不同的内存
+</code></pre></div><p>标示符 :变量名、函数名、对象名</p> <h4 id="标示符的命名规范"><a href="#标示符的命名规范" aria-hidden="true" class="header-anchor">#</a> 标示符的命名规范:</h4> <ol><li>必须由字母、数字、下划线和$组成</li> <li>必须以字母或下划线或$开头</li> <li>不能使用关键字和保留字</li> <li>使用驼峰命名法==&gt;如果变量是复合单词 则除了第一个单词以外的单词首字母大写</li> <li>语义化==&gt;见名识意</li> <li>可选分号  语句的结束</li></ol> <h4 id="注释"><a href="#注释" aria-hidden="true" class="header-anchor">#</a> 注释</h4> <ul><li>单行注释</li> <li>多行注释  ctrl+shift+?
+注释的作用:
+1.解释作用 2.阻止代码的执行</li></ul> <h3 id="算数运算符"><a href="#算数运算符" aria-hidden="true" class="header-anchor">#</a> 算数运算符</h3> <p>根据操作数的个数来分类:</p> <ul><li>一元(单目)运算符  ++ -- ! + -</li> <li>二元(双目)运算符  + - * / % &gt; &lt; &gt;= &lt;= != == !== === &amp;&amp; ||</li> <li>三元(三目)运算符==&gt;条件运算符 条件1?条件2:条件3</li></ul> <h4 id="运算符的优先级"><a href="#运算符的优先级" aria-hidden="true" class="header-anchor">#</a> 运算符的优先级</h4> <p>() []  &gt;  ++ -- ! +(转数值) - &gt; * / %  &gt;  &gt; &lt; &gt;= &lt;=  &gt;  + - (运算、拼接) &gt; &amp;&amp; ||</p> <ol><li>加性运算符: + -
+<ol><li>+号的作用</li></ol> <ul><li>运算</li> <li>拼接(加号遇到字符串拼接) 3)转数值</li></ul> <ol start="2"><li>-号的作用</li></ol> <ul><li>运算</li> <li>转数值</li></ul></li></ol> <div class="language- extra-class"><pre class="language-text"><code>'+':
+1) 正常运算
+	console.log(3+5);  //8
+2) 字符串拼接
+3) 转Number
+	var str='5';
+	console.log(typeof +str);  //'Number'
+	console.log(typeof str);  //'string'
+
+'-':
+1)正常运算
+	console.log(10-8);  //2
+2)转Number
+	console.log(-'5')  //-5
+</code></pre></div><ol start="2"><li>乘性运算符 * / %</li></ol> <ul><li>正无穷  任何正数除以0 都等于正无穷 Infinity</li> <li>负无穷  任何负数初以0  都等于负无穷 -Infinity</li></ul> <div class="language- extra-class"><pre class="language-text"><code>console.log(5/0);  //Infinity
+console.log(-3.14/0);  //-Infinity
+console.log(0/0);  //NaN
+</code></pre></div><ol start="3"><li>自增自减运算符 ++ --  ==&gt;只能被变量使用</li></ol> <p>分为前置和后置   ++x / x++ / --x / x--</p> <ul><li>前置:对变量先进行增一(减一)操作,然后再进行运算</li> <li>后置:先运算,再对变量先进行增一(减一)操作</li></ul> <ol start="4"><li>相等和不相等运算符 == != === !==</li></ol> <ul><li>相等和不相等 == !=  会进行隐式转换 只比较值</li></ul> <div class="language- extra-class"><pre class="language-text"><code>console.log('2'==2);//true
+console.log(NaN=='NaN');//false  (NaN不等于任何值，包括它本身）
+console.log(''!=0);//false
+</code></pre></div><ul><li>全等和不全等 === !== 不会进行隐式转换 先比较类型是否一致 再去比较值是否相等</li></ul> <div class="language- extra-class"><pre class="language-text"><code>console.log('20'===20);//false
+console.log('abc'==='xyz');//false
+console.log(null==undefined);//true
+console.log(null===undefined);//false   （类型不同）
+console.log(null=='');//false   （null只等于null和undefined) （undefined只等于null和undefined)
+console.log(3!==3);//false
+console.log('5'!==5);//true
+</code></pre></div><ol start="5"><li>逻辑运算符  !&gt;&amp;&amp;&gt;||</li></ol> <ul><li>! 返回值为boolean类型 非真即假,非假即真  逻辑非</li></ul> <div class="language- extra-class"><pre class="language-text"><code>console.log(!3);//false
+console.log(!0);//true
+console.log(!!'abc');//true
+</code></pre></div><ul><li>&amp;&amp; ==&gt; 逻辑与and
+<ul><li>找假(false)==&gt; 当表达式中,有假时,返回第一个为假的值</li> <li>如果表达式中 全部为真,则返回最后一个为真的值</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>console.log(3&amp;&amp;'abc'+88&amp;&amp;0);//0
+console.log(undefined&amp;&amp;'xyz');//undefined
+console.log(3*2 &amp;&amp; null &amp;&amp; 'qqq');//null
+console.log(3&amp;&amp;4);//4 
+console.log('aaa'&amp;&amp;3*4);//12
+console.log(''+1 &amp;&amp; true &amp;&amp; 'asdf'); //'asdf'
+</code></pre></div><ul><li>逻辑或 ||
+<ul><li>找真==&gt;当表达式中,有真时,返回第一个为真的值</li> <li>全部为假时,返回最后一个为假的值</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>console.log( 3|| undefined);//3
+console.log('we' || null || 123);//'we'
+console.log(null || undefined || false);//false
+console.log(''|| 3*false || NaN);//NaN
+console.log(false|| !undefined); //true
+Console.log(false|| undefined);//  undefined
+</code></pre></div><ol start="6"><li>初等运算符 () []  ==&gt;优先级最高的运算符</li> <li>逗号运算符  ==&gt;优先级最低的运算符 默认取的是最后一个值
+(有括号取最后一个值，无括号取第一个值）</li></ol> <div class="language- extra-class"><pre class="language-text"><code>var a;
+a=(1,2,3);
+console.log(a);// 3
+
+var b;
+b=1,2,3;
+console.log(b);// 1
+</code></pre></div><ol start="8"><li><p>赋值运算符 =  运算顺序 从右到左,左边必须只能是变量</p></li> <li><p>复合赋值运算符 += -= *= /= %= 运算顺序 从右到左</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>var a=3;
+a+=4;  //==&gt; a=a+4;
+a*=5; //==&gt; a=a*5;
+</code></pre></div><ol start="10"><li>条件运算符 ?:</li></ol> <ul><li>条件1?条件2:条件3</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var x='和嘎嘎哈哈'?alert('我是条件2'):alert(&quot;我是条件3&quot;);*/
+（条件1为true取条件2，条件1为false取条件2）
+</code></pre></div><h3 id="js转换"><a href="#js转换" aria-hidden="true" class="header-anchor">#</a> js转换</h3> <ol><li>Number() 强转函数==&gt;可以将任意类型转为数值</li></ol> <div class="language- extra-class"><pre class="language-text"><code>console.log(Number(true));//1
+console.log(Number(false))//0
+console.log(Number('abc'));//NaN
+console.log(Number('5'));//5
+console.log(Number('12ab'));//NaN
+console.log(Number(''));//0   （无空格）
+console.log(Number(' '));//0   （空格）
+console.log(Number(null));//0
+console.log(Number(undefined));//NaN
+</code></pre></div><ol start="2"><li>parseInt(被转换的字符串) ==&gt;将字符串转为整型</li></ol> <ul><li>会忽略前置空格 从第一个非空格字符开始往后查找 直到找到第一个非数值字符 停止 并返回该非数值前的内容</li> <li>忽略前置空格 如果第一个非空格字符就是非数值 则返回NaN</li></ul> <div class="language- extra-class"><pre class="language-text"><code>console.log(parseInt('3.14'));//3
+console.log(parseInt(' 45.56'));//45
+console.log(parseInt('  w123'));//NaN
+console.log(parseInt('100',2));//4   /100是二进制
+</code></pre></div><ol start="3"><li>parseFloat()==&gt;将字符串转为小数</li></ol> <div class="language- extra-class"><pre class="language-text"><code>console.log(parseFloat('12.34'));//12.34
+console.log(parseFloat('12.34.56'));//12.34
+console.log(parseFloat('12.3a4'));//12.3
+console.log(parseFloat('a12.34'));//NaN
+console.log(parseFloat('12.3456e2'));//1234.56
+</code></pre></div><ol start="4"><li>加号</li></ol> <div class="language- extra-class"><pre class="language-text"><code>console.log(+'5');//5
+console.log('5'*1);//5
+</code></pre></div><ol start="5"><li>隐式转换==&gt;后台调用Number()方法</li></ol> <div class="language- extra-class"><pre class="language-text"><code>- * / % &gt; &lt; &gt;= &lt;= isNaN() != ==   
++ (当两边都不是字符串时,加号也具有隐式转换功能)
+console.log(5-'2'+true); //4	
+console.log(8.4+'NaN');//'8.4NaN'
+console.log(isNaN('5'));//false
+</code></pre></div><ol start="6"><li>各种类型转字符串
+1)String()==&gt;强转函数 可以将各类型转为字符串</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	console.log(String(true));//'true'
+	console.log(String(123));//'123'
+	console.log(String(null));//'null'
+	console.log(String(undefined));//'undefined'
+	console.log(typeof String(fn));//'String'
+</code></pre></div><p>2)*.toString() ==&gt;可以将除了null和undefined以外的所有类型转为字符串(参数必须是变量)</p> <div class="language- extra-class"><pre class="language-text"><code>	var a=3;
+	console.log(a.toString());//'3'
+	var x=null;
+	console.log(x.toString());//报错
+	
+	字符串下标==&gt;从0开始 ，向右依次递增
+　　　var str='qwert'; //
+　　　　　　　　　（字符串中首个字符下标为0 ，第二个字符下标为1...）
+	console.log(str[3]);//‘r’
+</code></pre></div><ol start="3"><li>.length==&gt;获取字符串和数组的长度</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	console.log(str.length);//5
+	获取最后一个字符：console.log(str[str.length-1]);//‘t’
+</code></pre></div><ol start="7"><li>各种类型转布尔</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	Boolean()==&gt;强转函数 可以将任意类型转为boolean
+	console.log(Boolean(123));//true
+	console.log(Boolean(-34.5));//true
+	console.log(Boolean(NaN));//false
+	console.log(Boolean(0));//false
+	console.log(Boolean('abc'));//true
+	console.log(Boolean(''));//false
+	console.log(Boolean(' '));//true
+	console.log(Boolean(undefined));//false
+	console.log(Boolean(null));//false
+	var obj={}
+	console.log(Boolean(obj));
+</code></pre></div><table><thead><tr><th>---</th> <th>true</th> <th>false</th></tr></thead> <tbody><tr><td>Number</td> <td>除了NaN和0以外的所有数</td> <td>NaN和0</td></tr> <tr><td>String</td> <td>除了空串以外的字符串</td> <td>空串</td></tr> <tr><td>undefined</td> <td>无</td> <td>undefined</td></tr> <tr><td>对象(object)</td> <td>除了null以外的所有对象</td> <td>null</td></tr></tbody></table> <h2 id="if语句-选择结构-分支结构-的一种-switch语句"><a href="#if语句-选择结构-分支结构-的一种-switch语句" aria-hidden="true" class="header-anchor">#</a> if语句  选择结构(分支结构)的一种 switch语句</h2> <h3 id="if语句有三种形态"><a href="#if语句有三种形态" aria-hidden="true" class="header-anchor">#</a> if语句有三种形态</h3> <ol><li>单分支 ==&gt;判断小括号里的内容 结果是否成立,成立则执行大括号中的内容,不成立则什么都不做</li></ol> <p>当大括号中的内容 只有一条时 可以省略大号</p> <div class="language- extra-class"><pre class="language-text"><code>if(判断条件){
+	代码块;
+    }
+var a=prompt('输入内容')
+if(a&gt;=90){
+	alert('成才了');
+	alert('哈哈啊哈');
+	}
+</code></pre></div><ol start="2"><li>双分支==&gt;判断if后小括号中的内容是否成立 如果成立 则执行if后大括号中的内容 如果不成立 则执行else中的内容</li></ol> <div class="language- extra-class"><pre class="language-text"><code>if else
+if(判断条件){
+	代码块
+	}
+else{
+	代码块
+    }
+var age=prompt('请输入你的年龄','在这里输入..');
+if(age&gt;=18){
+	alert('你老啦');
+    }
+ else{
+ 	alert('你快老了');
+     }
+</code></pre></div><p>3.多分支 三条及三条以上   if else-if</p> <div class="language- extra-class"><pre class="language-text"><code>90-100 优秀
+80-89 良 
+70-79 中
+其他情况不及格
+if(){
+}
+else if(){
+         }
+else if(){
+
+        }
+.....
+else{
+}
+var score=prompt(&quot;请输入你的分数&quot;);
+ if(score&gt;=90 &amp;&amp; score&lt;=100){
+	alert('优秀');}
+    
+ else if(score&gt;=80 &amp;&amp; score&lt;90)
+ 	{alert('良');
+          }
+ else if(score&gt;=70 &amp;&amp; score&lt;80)
+ 	{alert('中');
+ 		}   
+ else
+ 	{alert('不及格');
+ 	    }
+</code></pre></div><h3 id="if语句的嵌套"><a href="#if语句的嵌套" aria-hidden="true" class="header-anchor">#</a> if语句的嵌套</h3> <div class="language- extra-class"><pre class="language-text"><code>var score=prompt(&quot;请输入你的分数&quot;);
+先判断输入的内容是否是数字
+再判断输入的数字是否在0--100之间
+  90-100 优秀
+  80-89 良 
+  70-79 中
+  其他情况不及格
+
+if(isNaN(score)){
+	alert(&quot;请输入数字&quot;);
+    }
+else if(score&gt;=0 &amp;&amp; score&lt;=100){
+	if(score&gt;=90){
+		alert('优秀');
+				 }
+	else if(score&gt;=80){
+		alert('良');
+			 }
+    else if(score&gt;=70){
+    	alert('中');
+    		 }
+    else{
+    	alert('不及格');
+    	      }
+	 }
+    						
+  else{
+  	alert(&quot;请输入正确的区间值&quot;);
+  	  }
+</code></pre></div><h3 id="弹出框"><a href="#弹出框" aria-hidden="true" class="header-anchor">#</a> 弹出框</h3> <div class="language- extra-class"><pre class="language-text"><code>alert()==&gt;系统弹出框
+confirm()==&gt;系统确认框   
+Var a=confirm(‘确定吗’);
+Console.log(a);  点击确定返回true；点击取消返回false；  
+prompt() ==&gt;系统输入框 ，输出方式
+Var a-prompt(&quot;提示文字&quot;,&quot;默认文本&quot;);
+Console.log(a) 点击确定返回默认文本中输入的内容（内容为string类型）；点击取消返回null（空类型）；
+Console.log(typeof a)； 点击确定返回string；
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>alert('dasd'); //系统弹出框
+var x=confirm(&quot;确定吗&quot;);// 系统确认框 点确认返回true 点取消返回false 
+console.log(x);
+</code></pre></div><p>系统输入框</p> <div class="language- extra-class"><pre class="language-text"><code>var x=prompt('提示文字','默认文本'); //点击确认返回输入框中的文本(String类型) 点击取消返回null
+console.log(typeof x);//string
+Console.log(x);//提示文字
+</code></pre></div><h3 id="switch语句-是选择结构的一种"><a href="#switch语句-是选择结构的一种" aria-hidden="true" class="header-anchor">#</a> switch语句 是选择结构的一种</h3> <ol><li></li></ol> <ul><li>switch后小括号中和case后可以是任意类型的内容</li> <li>switch会用switch后小括号中的值和每个case后的值做全等比较; 如果全等执行 相应case后的代码块</li> <li>break:立即结束switch的执行 (可选的) 执行语句中,没有遇到break 则会一直往下执行 直到遇到break 如果支没有遇到 break 则会将switch语句执行完毕</li> <li>case 和default的位置 不会影响执行效果</li> <li>多个case 可以执行 同一条语句</li> <li>default:缺省值 (可选的)</li></ul> <ol start="2"><li>语法结构:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>		switch('a'){
+			case 'a':代码块;break;  
+			case 'a':代码块;  
+			case 'a':代码块;  
+			case 'a':代码块;  
+			case 'a':代码块;
+			...  
+			default:代码块;
+			}
+</code></pre></div><ol start="3"><li>案例：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>1.var day=prompt(&quot;请输入今天是周几?&quot;);
+	switch(Number(day)){
+		
+		case 4:alert('四');break;
+		case 4:alert('六');break;
+		case 1:alert('一');break;
+		default:alert('输入有误');break;
+		case 2:alert('二');break;
+		case 3:alert('三');break;
+		case 5:alert('五');break;
+		case 7:alert('日');
+					  }
+2.输入月份,弹出相应的季节
+var month=prompt(&quot;请输入月份&quot;);
+switch(Number(month)){
+	case 12:
+	case 1:
+	case 2:alert('冬天');break;
+	case 3:
+	case 4:
+	case 5:alert('春天');break;
+	case 6:
+	case 7:
+	case 8:alert('夏天');break;
+	case 9:
+	case 10:
+	case 11:alert('秋天');break;
+		}
+</code></pre></div><ol start="4"><li>if和switch的区别</li></ol> <ul><li>可以互相替换</li> <li>当分支在三条以内时(&lt;=3)使用if语句,当分支在四条及以上(&gt;=4)时 使用switch语句</li></ul> <h2 id="循环"><a href="#循环" aria-hidden="true" class="header-anchor">#</a> 循环</h2> <p>循环:反复执行某一部分操作 意义: 节省代码量,提高运行效率 方便修改维护代码</p> <ul><li>循环结构 for循环 while循环 do-while循环</li> <li>当型循环: for while 先判断 后执行</li> <li>直到型循环: do-while 先执行 后判断</li></ul> <ol><li>do while</li></ol> <div class="language- extra-class"><pre class="language-text"><code>1.初始值 
+do{
+   4.代码块;
+   3.步长值;
+}
+while(2.控制条件 ; )
+var= 0;
+do{
+    console.log(i);
+    i++;
+} while(i &lt; 0)
+</code></pre></div><ol start="2"><li>For() 里的值为布尔类型</li></ol> <div class="language- extra-class"><pre class="language-text"><code>(1.初始值 ; 2.控制条件 ; 3.步长值 ){
+			4.代码块
+		 }	
+</code></pre></div><p>执行顺序:  1 ==&gt; 2 ==&gt; 4 ==&gt; 3  ==&gt; 2 ==&gt; 4 ==&gt;3</p> <ol start="3"><li>案例</li></ol> <ul><li>控制台中打印1--5</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	&lt;1&gt;for(var i=1; i&lt;=5; i++ ){
+		console.log(i);
+					   }
+	var i=1;
+	&lt;2&gt;for( ; ; ){       //两个分号必须写
+		if(i&gt;5){   
+			break;
+			   }
+	console.log(i);
+	i++;
+		 }
+
+	for(var i=1;i&lt;5;i+=1);
+		console.log(i); //5  
+</code></pre></div><ul><li>在控制台打印1-100的奇数</li></ul> <div class="language- extra-class"><pre class="language-text"><code> 	for(var i=1;i&lt;=100;i++){
+ 		if(i%2==1){
+ 			console.log(i);
+ 			}
+  }
+</code></pre></div><ul><li>在控制台打印1-100的偶数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>for(var i=1;i&lt;=100;i++){
+ 		if(i%2!==1){
+ 			console.log(i);
+ 			}
+  }
+</code></pre></div><ol start="4"><li>while</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	1.初值
+	while(2.控制条件){
+		3.步长值
+4.代码块
+		   }
+	var i=1;
+	while(i&lt;10){
+		console.log(i);
+		i++;
+		   	   }
+</code></pre></div><p>当循环次数已知时 用for 当循环次数未知时 用while循环</p> <ul><li>Count  打印次数  珠峰折纸问题  884443m 1m</li></ul> <div class="language- extra-class"><pre class="language-text"><code>     var zhi=1,mon=884443,count=0;
+ 	while(zhi&lt;=mon){
+ 		zhi*=2;
+ 		document.write(zhi+&quot; &quot;);
+ 		count++;
+ 		   		   }
+ 	document.write('&lt;br&gt;&lt;hr&gt;打印次数'+count)
+</code></pre></div><ul><li>打印三位数中的水仙花数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var a,b,c;
+	for(var i=100; i&lt;=999; i++){
+		a=parseInt(i/100);         //提取百位数上的数字
+		b=parseInt((i-a*100)/10);        //提取十位数上的数字
+		c=i%10;       //提取个位数上的数字
+		if(a*a*a+b*b*b+c*c*c==i){   // 判断是否为水仙花数
+			console.log(i);}
+						}
+</code></pre></div><ul><li>倒序打印星星</li></ul> <div class="language- extra-class"><pre class="language-text"><code>for(var i=1;i&lt;=5;i++){   //外循环控制行
+	for(var j=1;j&lt;=6-i;j++){   //内循环控制列
+		       document.write(&quot;*&quot;);
+	 	       }
+	 	document.write('&lt;br/&gt;'); 
+ 	       }
+</code></pre></div><ul><li>倒序打印星</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var i=1;
+while(i&lt;=9){
+    var j=9;
+    while(j&gt;=i){
+        document.write('*');
+        j--;
+           }  
+        i++;  
+        document.write('&lt;br /&gt;');
+    }
+</code></pre></div><ul><li>正序打印星星</li></ul> <div class="language- extra-class"><pre class="language-text"><code>for(i=1;i&lt;=10;i++){
+	for(j=1;j&lt;=i;j++){
+		document.write('☆'+' ')
+	     }
+	document.write('&lt;br&gt;')
+}
+</code></pre></div><ul><li>打印九九乘法表</li></ul> <div class="language- extra-class"><pre class="language-text"><code>for(i=1;i&lt;=9;i++){
+	for(j=1;j&lt;=i;j++){
+		document.write(j+'*'+i+'='+i*j+'  ')
+                      }
+document.write('&lt;br&gt;')
+}
+</code></pre></div><ol start="5"><li>break和continue 的区别</li></ol> <ul><li>break可以在switch和所有循环中 单独使用  立即结束循环</li> <li>continue 只能在循环中使用 立即结束本次循环,继续执行下一次循环</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	for(var i=1; i&lt;=10; i++){
+		if(i%3==0){
+			continue;
+			}
+		console.log(i);  } //1 2 4 5 7 8 10
+for(var i=1; i&lt;=10; i++){
+		if(i%3==0){
+			Break;
+			}
+		console.log(i);  } //1 2
+</code></pre></div><ul><li>if  返回值是boolean;</li> <li>isNaN  返回值是boolean;</li> <li>typeof   返回值是string;</li> <li>parseInt   返回值是number;</li></ul> <h2 id="函数"><a href="#函数" aria-hidden="true" class="header-anchor">#</a> 函数</h2> <h4 id="函数定义"><a href="#函数定义" aria-hidden="true" class="header-anchor">#</a> 函数定义</h4> <ol><li><p>函数:函数是指由事件驱动或可重复调用执行的代码块</p></li> <li><p>作用:一次封装 多次调用 节省代码量 提高加载速度</p></li> <li><p>函数的创建</p></li></ol> <ul><li>函数声明</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function 函数名(形参列表){
+		执行代码块;
+					 }
+</code></pre></div><ul><li>函数表达式==&gt;将一个匿名函数赋给变量的方式</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var fn=function(){
+
+					 }
+</code></pre></div><ol start="4"><li>函数声明和函数表达式的区别:
+<ul><li>函数声明定义函数之后 可以在任何地方调用</li> <li>函数表达式 必须先定义才能调用 如果先调用了会报错</li></ul></li></ol> <div class="language- extra-class"><pre class="language-text"><code>	var fn=function(形参){
+		代码块					 }
+	fn(实参);  
+</code></pre></div><ol start="5"><li>形参:形式参数 ==&gt;用于接受实参的变量 写在创建函数时 小括号里的内容
+如果形参没有接收到值 默认保存undefined</li> <li>实参:真实参数 ==&gt;用来传递数据给形参的变量 调用函数时 小括号里的内容
+参数传递:是单向的 只能 实参传给形参(一次性的) 不能形参传给实参</li> <li>arguments
+<ul><li>函数中 用来保存实参的集合(伪数组) 数组用来保存数据的集合</li></ul></li> <li>arguments 和形参 映射关系
+<ul><li>agruments和形参存在一一对应的关系</li> <li>如果某个形参的值发生了改变, 则相应的arguments值也发生了改变,同样,
+如果agruments的某个值  发生了改变 则相应的形参也会发生改变</li></ul></li></ol> <div class="language- extra-class"><pre class="language-text"><code>function fn(a,b){
+	arguments[0]=50;//a=50
+	a=10;
+	console.log(a+b);   //14
+		 }
+fn(3,4);
+</code></pre></div><ol start="9"><li>模拟函数重载==&gt;通过arguments的长度 来判断实参个数 做不同的事</li></ol> <div class="language- extra-class"><pre class="language-text"><code>function fn(){
+	if(arguments.length==1){
+		console.log(arguments[0]);   //7
+		}
+	else  if(arguments.length==2){
+		alert(arguments[0]+arguments[1]);  //11
+			  }
+	else if(arguments.length==3){
+		alert(arguments[0]*arguments[1]*arguments[2]);  //24
+			 }
+			}
+fn(2,3,4)
+fn(5,6)
+fn(7)
+</code></pre></div><h4 id="函数的返回值"><a href="#函数的返回值" aria-hidden="true" class="header-anchor">#</a> 函数的返回值</h4> <ol><li>return关键字==&gt;返回相应的值到主调函数中</li> <li>return的作用: 1. 返回相应的值(可以返回任何类型的内容) 2.立即结束函数的执行</li></ol> <div class="language- extra-class"><pre class="language-text"><code>function fn(a,b){
+  if((a+b)%2==1){
+    return true;
+    }
+  else{
+    return false;
+    }
+       }
+   console.log(fn(2,3))   //true  
+undefined 调用函数 默认值为 undefined
+function fn(){
+	console.log(1); //1
+	return 2;
+ 	console.log(3);
+console.log(4);
+			 }
+ console.log(fn()*2); //4
+
+
+function fn(){
+	return x;   
+	var x=10;   //var有变量提升功能
+			 } 
+Console.log(fn())   //没有返回值 默认返回undefined
+</code></pre></div><ol start="3"><li>全局变量:在函数外部定义的变量叫做全局变量  全局变量的作用范围为script标签中</li> <li>局部变量:在函数内部定义的 带var的变量叫做局部变量 没var的依然是全局变量
+作用范围只在函数中有效 (函数的形参也是局部变量)</li></ol> <div class="language- extra-class"><pre class="language-text"><code>var x=5;
+function fn(){
+	 console.log(x); // undefined
+	 var x=10;
+	 console.log(x); //  10
+			 }
+fn();
+</code></pre></div><ol start="6"><li>函数自执行：</li></ol> <div class="language- extra-class"><pre class="language-text"><code>  (function(){})();
+  (function(){}());
+!function(){}();   ==&gt; (!还可以是+ - ~）
+</code></pre></div><h2 id="字符串的创建"><a href="#字符串的创建" aria-hidden="true" class="header-anchor">#</a> 字符串的创建:</h2> <ol><li>字符串的创建有两种方式:</li></ol> <div class="language- extra-class"><pre class="language-text"><code>var s = '123';
+var s = new String('123');
+</code></pre></div><ol start="2"><li>.length 获取长度</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	console.log(str.length);   //11
+</code></pre></div><ol start="3"><li>通过 下标来获取相应的字符</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	console.log(str[4]);   //'o'
+	console.log(str[str.length-1]);   //'d'
+	var newStr='';   空串长度为0；
+	console.log(newStr.length);   //0
+</code></pre></div><ol start="4"><li>字符串截取方法    返回值string</li></ol> <ul><li>字符串.charAt(下标值)==&gt;通过下标 获取字符串中相应的字符</li></ul> <div class="language- extra-class"><pre class="language-text"><code>   var str='hello world';
+   console.log(str.charAt(7));  //'o'
+</code></pre></div><ul><li>字符串.charCodeAt(下标值)==&gt;通过下标 获取字符串中相应的字符的ASCII值</li></ul> <div class="language- extra-class"><pre class="language-text"><code>   var str='hello world';
+   console.log(str.charCodeAt(1));   //下标为1的是e；e的ASSCII值为101；
+    
+      A的ASSCII值为65，B的ASSCII值为66；a的ASSCII值为97(A的ASSCII值+32);
+</code></pre></div><ul><li>字符串.slice(起始下标,结束下标);  左包右不包 遇见负数加字符串长度(length)</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var str='hello world';
+   console.log(str.slice(1));//'ello world'
+   console.log(str.slice(3,8));//'lo wo'
+   console.log(str.slice(-4));//'orld'
+   console.log(str.slice(-1,5));//''
+Console.log(str.slice(5,5));//''
+console.log(str.slice(5,6));//''
+   console.log(str.slice(-8,-5));//'lo '
+</code></pre></div><ul><li>字符串.substr(起始下标,截取个数);</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var str='hello world';
+   console.log(str.substr(1));//'ello world'
+   console.log(str.substr(3,7));//'lo worl'
+   console.log(str.substr(-4));//'orld'
+   console.log(str.substr(-1,5));//'d'
+   console.log(str.substr(-5,-5));//''   （两个都为负值且下标个数一样都为‘’）
+</code></pre></div><ul><li>substring(起始下标,结束下标)   左包右不包</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var str='hello world';
+	console.log(str.slice(2,5));//'llo'
+	console.log(str.substring(2,5));//'llo'
+
+	console.log(str.slice(5,2));//&quot;&quot;
+	console.log(str.substring(5,2));//'llo'
+	console.log(str.substring(-1,5));//'hello'     （-1默认为0）遇到负数为0
+	console.log(str.substring(-5,-3));//''      （两个为负数默认为空）
+</code></pre></div><ol start="5"><li>查找方法</li></ol> <ul><li>.indexOf(查找字符(串),起始下标)==&gt; 查找字符(串)在字符串中首次出现的位置
+(下标)
+通过字符找下标
+左==&gt;右
+查找不着 默认返回-1</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	var str='hello world';
+	console.log(str.slice(8,10));//'rl'
+	console.log(str);     //'hello world'
+	console.log(str.indexOf('e'));//1
+	console.log(str.indexOf('o'));//4
+	console.log(str.indexOf('o',5));//7     (从第五个字符开始第一个o的下标）
+	console.log(str.indexOf('x'));//-1       查找不着 默认返回-1
+	console.log(str.indexOf('wor'));//6
+</code></pre></div><ul><li>.lastIndexOf(查找字符(串),起始下标)==&gt; 查找字符(串)在字符串中最后一次出现的位置(下标)
+右==&gt;左</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var str='hello world';
+	console.log(str.lastIndexOf('o'));//7
+	console.log(str.lastIndexOf('lo'));//3
+	console.log(str.lastIndexOf(&quot;l&quot;,6));//3
+</code></pre></div><ul><li>.toUpperCase() 转大写</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var str='hello world';
+	console.log(str.toUpperCase());//HELLO WORLD
+</code></pre></div><ul><li>.toLowerCase()  转小写</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var x='AbCd';
+	console.log(x.toLowerCase());  //abcd
+</code></pre></div><p>Math.ceil  向上取整         返回值number</p> <div class="language- extra-class"><pre class="language-text"><code>	console.log(Math.ceil(3.01));//4
+	console.log(Math.ceil(3.99));//4
+</code></pre></div><p>Math.floor 向下取整       返回值number</p> <div class="language- extra-class"><pre class="language-text"><code>	console.log(Math.floor(3.01));//3
+	console.log(Math.floor(3.99));//3
+</code></pre></div><p>Math.round 四舍五入            返回值number</p> <div class="language- extra-class"><pre class="language-text"><code>	console.log(Math.round(3.49));//3
+	console.log(Math.round(3.51));//4
+</code></pre></div><p>Math.min         最小值       返回值number</p> <div class="language- extra-class"><pre class="language-text"><code>	console.log(Math.min(5,true,8,null,'abc'));   //NaN   
+</code></pre></div><p>Math.max        最大值       返回值number</p> <div class="language- extra-class"><pre class="language-text"><code></code></pre></div><p>Math.random() 随机数 随即生成0--1之间的数   [0,1)</p> <div class="language- extra-class"><pre class="language-text"><code>		假设 你想获取20--30之间的随机数
+	Math.floor(Math.random()*(最大值-最小值+1)+最小值);   
+	Math.floor(Math.random()*11+20);
+console.log(Math.random());
+</code></pre></div><p>Math.abs() 取绝对值</p> <div class="language- extra-class"><pre class="language-text"><code>	console.log(Math.abs(1),Math.abs(-1));  //1 1
+</code></pre></div><p>Math.pow(m,n)  求m的n次幂</p> <div class="language- extra-class"><pre class="language-text"><code>    console.log(Math.pow(2,3));   //8
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>  var str='qwertyuiosdfghjkfgdsja';
+    连缀写法 
+   console.log(str.slice(0,str.length-1)+str[str.length-1].toUpperCase());//
+'qwertyuiosdfghjkfgdsjA'
+</code></pre></div><h2 id="数组"><a href="#数组" aria-hidden="true" class="header-anchor">#</a> 数组</h2> <ol><li>数组是什么?
+在内存在占用连续内存 保存数据的集合 返回值object</li> <li>数组的创建</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	//1.
+	var arr=[];  //数组字面量(直接量)
+
+	//2.用构造器(构造函数)创建数组
+var arr=new Array(5);// 构造器创建函数时 如果小括号中的值为 单个数值时 则被视为数组长度
+</code></pre></div><ol start="3"><li>数组元素的读(获取) 写(设置)</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	var arr=['a',null,undefined];
+	console.log(arr[0]);//'a'
+	console.log(arr[arr.length-1]);//undefined
+arr[10]='xyz';   console.log(arr.length);  //11
+	arr[1]=123;      console.log(arr.length);  //3
+	arr[100]='asdas';    console.log(arr.length);//101
+</code></pre></div><ol start="4"><li>清空数组</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	arr.length=0;
+	console.log(arr);    //[]
+</code></pre></div><ol start="5"><li>删除数组中的最后一个元素</li></ol> <div class="language- extra-class"><pre class="language-text"><code>var arr=['a',null,undefined];
+	arr.length-=1;   （arr.length=arr.length-1;）
+	console.log(arr);   //[&quot;a&quot;, null]
+</code></pre></div><ol start="6"><li>.length 属性</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	var arr=[1,2,3,4,5,6,'a',null];
+	console.log(arr.length);//8
+</code></pre></div><ol start="7"><li>数组的遍历</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	var arr=['abc',345,456,'x',undefined];	
+	正序遍历数组
+	for(var i=0; i&lt;arr.length; i++){
+		console.log(arr[i]);
+		 }
+	倒叙遍历数组
+	for(var i=arr.length-1; i&gt;=0 ; i--){
+		console.log(arr[i]);
+		 }
+</code></pre></div><ol start="8"><li>检测</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	typeof
+	var arr=[1,2,3,4,5,6,'a',null];
+	console.log(typeof arr); //' object'
+	 instanceof 检测类型
+	function fn(){}
+	console.log(fn instanceof Array) false 
+</code></pre></div><ol start="9"><li>转换方法</li></ol> <ul><li>字符串转数组 ==&gt; 字符串.split(分隔符);
+<ul><li>如果 小括号中 没有参数,则默认该字符串为一个数组项</li> <li>如果 小括号中 参数为空字符串 则字符串中的每个字符 都是一个数组项</li> <li>如果 小括号中 参数为 字符串中 不存在的字符 则默认该字符串为一个数组项</li> <li>如果 小括号中 参数为字符串中的某个字符 则该字符变为逗号,逗号与逗号之间如果没有
+内容 则默认为 空字符串,如果该字符为前置或后缀字符,则前置字符前和后缀字符后需添加空字符串</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>Var str='abbaceattyar';
+	console.log(str.split());//[&quot;abbaceattyar&quot;]
+	console.log(str.split(&quot;&quot;));//[&quot;a&quot;, &quot;b&quot;, &quot;b&quot;, &quot;a&quot;, &quot;c&quot;, &quot;e&quot;, &quot;a&quot;, &quot;t&quot;, &quot;t&quot;, &quot;y&quot;, &quot;a&quot;, &quot;r&quot;]
+	console.log(str.split(' '));//[&quot;abbaceattyar&quot;]
+	console.log(str.split('a'));// [&quot;&quot;, &quot;bb&quot;, &quot;ce&quot;, &quot;tty&quot;, &quot;r&quot;]
+
+	var str='qqqwqrqqqq';
+	console.log(str.split('q'));//[ '','' ,'' , 'w' , 'r' ,'' ,'' ,''  ,'']
+
+
+	var str='wertwwtwtw';
+	console.log(str.split('w'));
+	//[ '' , 'ert' ,  ''  , 't' , 't' , '' ]
+
+</code></pre></div><ul><li>数组转字符串</li></ul> <p>join(连接符);</p> <div class="language- extra-class"><pre class="language-text"><code>	var arr=['xy',123,'bcd'];
+	console.log(arr.join());//xy,123,bcd
+	console.log(arr.join('-'));//xy-123-bcd
+	console.log(arr.join(&quot;&quot;));//xy123bcd
+
+	var arr=['xy',123,'bc'];
+</code></pre></div><p>栈方法  ==&gt;会改变原数组</p> <div class="language- extra-class"><pre class="language-text"><code>	push(添加项1,添加项2....) 在队尾添加一个或多个项,返回值为新数组长度
+	console.log(arr.push(5,6)); //5
+	console.log(arr); //['xy',123,'bc',5,6]
+</code></pre></div><p>pop()==&gt; 在队尾删除一个项,返回值为被删除的项</p> <div class="language- extra-class"><pre class="language-text"><code>	console.log(arr.pop());//'bc'
+	console.log(arr);//['xy',123]
+</code></pre></div><p>队方法  ==&gt;会改变原数组</p> <div class="language- extra-class"><pre class="language-text"><code>	unshift(添加项1,添加项2....) 在队头添加一个或多个项 返回值为 新数组长度
+	console.log(arr.unshift(1,'we'));//5
+	console.log(arr);//[1,'we','xy',123,'bc']
+</code></pre></div><p>shift()==&gt;在队头删除一个项,返回值为被删除的项</p> <div class="language- extra-class"><pre class="language-text"><code>	console.log(arr.shift());//'xy'
+	console.log(arr);//[123,'bc']
+</code></pre></div><p>重排序方法 ==&gt;会改变原数组</p> <ul><li>reverse() 数组翻转</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	var arr=[4,5,2,1,3];
+	console.log(arr.reverse());//[3, 1, 2, 5, 4]
+	console.log(arr);//[3, 1, 2, 5, 4]
+</code></pre></div><ul><li>sort() 数组排序==&gt;默认按照 数组项的ASCII值排序 从小到大
+会改变原数组</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	var arr=[12,4,222,34];
+	console.log(arr.sort());      //[12, 222, 34, 4]
+	console.log(arr.sort(function(x,y){
+		return x-y; //第一个参数减第二个参数 升序排序    //[4, 12, 34, 222]
+		return y-x;   //第二个参数减第一个参数 降序排序   //[222, 34, 12, 4]
+	}));
+     Console.log(arr);    //[222, 34, 12, 4]
+</code></pre></div><ol start="10"><li>操作方法</li></ol> <ul><li>数组.concat(拼接项1,拼接项2...) 数组拼接(拼接常量)
+返回值为:拼接后的数组， 原数组不变</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	var arr=[1,2],arr1=['ab','c'],arr2=['ty',null];
+	console.log(arr.concat(undefined,456));   //[1, 2, undefined, 456]
+	console.log(arr)     //[1, 2]
+</code></pre></div><ul><li>数组.slice() 数组截取</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	var arr=[4,5,1,'a',undefined];
+	console.log(arr.slice(1,3)); //[5,1]
+</code></pre></div><ul><li>数组.splice(起始下标,删除个数,添加项1,添加项2...) 会改变原数组
+返回值为被删除项组成的数组
+数组的增删改方法</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	var arr=[1,3,'aaa',null];
+	console.log(arr.splice(2,3,4,5));//[&quot;aaa&quot;,null]
+	console.log(arr);//[1,3,4,5]
+
+	var arr=[5,4,'ab',undefined,250];
+	console.log(arr.splice(1,2,3,4)); //[4,'ab']
+	console.log(arr);//[5,3,4,undefined,250]
+
+	var arr=[23,45,11,78,'ab']; 
+	console.log(arr.splice(1,0,34,44));//[]    
+（删除个数为0；无删除返回值为[]）
+	console.log(arr);//[23, 34, 44, 45, 11, 78, &quot;ab&quot;]
+
+	使用prompt弹出输入框，要求用户输入一个英文的语句，将输入语句的第二个单词截取出来
+	var str=prompt(&quot;请输入一句话&quot;);
+	var arr=str.split(&quot; &quot;);    （split字符串转数组）
+	alert(arr[1]);
+</code></pre></div><ul><li>数组.replace(被替换项,替换项);  将被替换项首次出现的位置 替换成 替换项
+不会改变原数组</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	var str='hello world';
+	console.log(str.replace('o',1));  //hell1 world
+	console.log(str)   //hello world
+</code></pre></div><h2 id="日期对象创建"><a href="#日期对象创建" aria-hidden="true" class="header-anchor">#</a> 日期对象创建</h2> <ol><li>创建</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	var 变量名=new Date(你要设置的时间);
+	var time=new Date();
+console.log(time);//Thu Sep 06 2018 13:39:46 GMT+0800 (中国标准时间)
+	console.log(typeof time);// 'object' 数组 
+	unction fn(){} console.log(typeof fn);//'Function '
+</code></pre></div><ol start="2"><li>方法</li></ol> <ul><li>toLocaleString() ==&gt;按照当地的日期格式显示时间和日期</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	console.log(typeof time.toLocaleString());   //’String’
+</code></pre></div><ul><li>toLocaleDateString() 按照当地格式 显示 日期</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	console.log(time.toLocaleDateString());//2018/9/6
+	console.log(time.toLocaleTimeString());//下午1:47:59(当前时间）
+</code></pre></div><ul><li>toString() 可以将除了null和undefined以外的所有类型转为字符串
+console.log(time.toString());//'Thu Sep 06 2018 13:46:17 GMT+0800 (中国标准时间)'</li></ul> <ol start="3"><li>时间戳==&gt; 1970年1月1日00:00:00 到现在的时间的毫秒形式</li></ol> <ul><li>日期对象.valueOf();  ==&gt;将日期对象转时间戳</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	console.log(time.valueOf());  //************
+	console.log(time*1);   //************
+	console.log(+time);     //************
+	console.log(time.getTime());   //************
+</code></pre></div><ul><li>日期对象.getFullYear() 获取年份</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	console.log(time.getFullYear());//2018
+</code></pre></div><ul><li>日期对象.getMonth() 获取月份</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	console.log(time.getMonth());//[0,11] 0代表1月 11代表12月
+</code></pre></div><ul><li>日期对象.getDate() 获取日期</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	console.log(time.getDate());//[1,31]
+</code></pre></div><ul><li>日期对象.getDay() 获取星期</li></ul> <div class="language- extra-class"><pre class="language-text"><code>console.log(time.getDay());// 1-6 依次代表 星期一到六 0代表星期天 
+</code></pre></div><ul><li>日期对象.getHours() 获取小时</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	console.log(time.getHours()); //[0,23]  0代表24时
+</code></pre></div><ul><li>日期对象.getMinutes() 获取分钟</li></ul> <div class="language- extra-class"><pre class="language-text"><code>console.log(time.getMinutes());//[0,59] 
+</code></pre></div><ul><li>日期对象.getSeconds() 获取秒数</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	console.log(time.getSeconds());//[0,59]
+</code></pre></div><ul><li>日期对象.getMilliSeconds() 获取毫秒</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	console.log(time.getMilliseconds());//[0,999]
+</code></pre></div><ul><li>日期对象.setTime(设置时间(毫秒形式)); ==&gt;</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	var timer=new Date();
+	console.log(timer.setTime(1000));   //1000
+	console.log(timer);    //Thu Jan 01 1970 08:00:01 GMT+0800 (中国标准时间)
+	setFullYear(设置的年份)
+	console.log(timer.setFullYear(2096)); //************
+	setMonth(设置的月份)
+	console.log(timer.setMonth(7));   //************
+	setDate(设置的日期);  
+	timer.setDate(40);
+	setHours(设置小时)
+	timer.setHours(18);
+	setMinutes(设置分钟)
+	timer.setMinutes(55);
+	setSeconds(设置秒)
+	timer.setSeconds(70);
+
+	console.log(timer)  //Sun Sep 09 2096 18:56:10 GMT+0800 (中国标准时间)
+</code></pre></div><p>###日期对象的容错能力</p> <div class="language- extra-class"><pre class="language-text"><code>	var time=new Date(&quot;2008-8-8 20:00:00&quot;);
+ //日期之间可以 以 , /  - 连接 时间直接以:连接
+	var time=new Date(2008,17,45); 
+     Console.log(time);  //2009 7 15 
+	
+	var time=new Date(2020,2,0);
+	console.log(time);//2020-2-29
+
+	console.log(new Date(2010,5,0).getDate());//31
+	console.log(new Date(2022,33,44)); //2024 10 13
+	如果要操作日期对象 则必须先new Date()
+</code></pre></div><ol><li>（forEach\map\filter\some\every）数组的五大迭代方法</li></ol> <div class="language- extra-class"><pre class="language-text"><code>var arr=[2,3,1,4,5];
+</code></pre></div><ul><li>forEach 数组遍历
+只有forEach没有返回值 其它都有</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var val=arr.forEach(function(item){
+	console.log(item);
+})
+console.log(val)
+</code></pre></div><ul><li>every检测数组项中是否 满足条件 全部满足返回true 否则返回false</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var val=arr.every(function(item){
+	return item&gt;0;
+})
+console.log(val);  //true
+</code></pre></div><ul><li>some检测数组项中是否 满足条件 只有有一个满足条件则返回true  全部不满足则返回false</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var val=arr .some(function(item){
+	return item&gt;5;
+})
+console.log(val);    //false
+</code></pre></div><ul><li>map 返回 条件和数组中的每一项比较的结果 组成的数组</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var val=arr.map(function(item){
+	return item&gt;2;
+})
+console.log(val);   //[false, true, false, true, true]
+</code></pre></div><ul><li>filter 返回数组项中 满足条件的数组项组成的数组</li></ul> <div class="language- extra-class"><pre class="language-text"><code>var arr=['王峰','王我','赵丹丹','王五','陈帅'];
+var val=arr.filter(function(item){
+	return item.charAt(0)=='王';
+})
+console.log(val);   //[&quot;王峰&quot;, &quot;王我&quot;, &quot;王五&quot;]
+</code></pre></div><h1 id="dom"><a href="#dom" aria-hidden="true" class="header-anchor">#</a> DOM</h1> <ol><li><p>JS的组成部分: DOM文档对象模型 BOM浏览器对象模型 ECMAscript JS核心</p></li> <li><p>DOM文档对象模型 document object model
+html结构  css样式  js 行为</p></li> <li><p>节点是什么?  浏览器将html源文件中的 所有内容都视为节点</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>&lt;div&gt;&lt;/div&gt; 标签(元素)节点
+    //哈哈哈    注释节点
+     &lt;p style=&quot;width:200px;&quot;&gt;&lt;/p&gt; 属性节点
+     整个document 被称为 文档节点
+&lt;div&gt;我是div&lt;/div&gt; //文本节点
+</code></pre></div><p>元素中文本默认的类型为string类型</p> <div class="language- extra-class"><pre class="language-text"><code>	&lt;body&gt;
+
+		&lt;li class=&quot;qq&quot;&gt;77777&lt;/li&gt;
+		&lt;div id=&quot;box&quot; class='www' name='zxc'&gt;
+				&lt;li&gt;11&lt;/li&gt;
+				&lt;li class=&quot;li&quot;&gt; 
+						&lt;p&gt;vvvv&lt;/p&gt;
+						&lt;p&gt;qwe&lt;/p&gt;
+						&lt;p&gt;saa&lt;/p&gt;
+
+				&lt;/li&gt;
+				&lt;li class=&quot;qq&quot;&gt;33&lt;/li&gt;
+				&lt;li&gt;44&lt;/li&gt;
+				&lt;p name=&quot;ww&quot;&gt;&lt;/p&gt;
+				&lt;div id=&quot;sonBox&quot; class=&quot;qq&quot; name=&quot;ww&quot;&gt;&lt;/div&gt;
+				&lt;p name=&quot;ww&quot;&gt;&lt;/p&gt;
+		&lt;/div&gt;
+
+		&lt;li&gt;55555&lt;/li&gt;
+		&lt;li name='ww'&gt;66666&lt;/li&gt;
+    
+    &lt;/body&gt;
+</code></pre></div><p>document.getElementById('id名') 效率最高 性能最优
+通过id名获取元素只能获取一个</p> <div class="language- extra-class"><pre class="language-text"><code>     var box=document.getElementById('box');
+     var sonBox=document.getElementById('sonBox');
+</code></pre></div><p>document.getElementsByTagName('标签名');
+通过标签名 获取元素的集合==&gt;伪数组的形式</p> <div class="language- extra-class"><pre class="language-text"><code>    var lis=box.getElementsByTagName('li');
+    console.log(lis[lis.length-1]); 下标   //&lt;li&gt;44&lt;/li&gt; 
+ (id名为box下最后一个li）
+</code></pre></div><p>document.getElmentsByClassName('class名');
+通过class名 获取元素的集合==&gt;伪数组的形式</p> <div class="language- extra-class"><pre class="language-text"><code>    var qqs=box.getElementsByClassName('qq');
+    console.log(qqs)  //（id名为box下所有类名为qq）
+</code></pre></div><p>document.getElementsByName('name名');
+通过name名 获取元素的集合==&gt;伪数组的形式</p> <div class="language- extra-class"><pre class="language-text"><code>    var ps=document.getElementsByName('ww');
+</code></pre></div><p>document.querySelector();
+通过标签名、类名、id名 属性获取首个节点</p> <div class="language- extra-class"><pre class="language-text"><code>   var p=document.querySelector('#box .li p');    //&lt;p&gt;vvvv&lt;/p&gt;
+</code></pre></div><p>document.querySelectorAll();
+通过标签名、类名、id名 属性获取全部节点
+返回值为 伪数组 NodeList(节点集合)</p> <div class="language- extra-class"><pre class="language-text"><code>   var ps=document.querySelectorAll('#box .li p');
+   console.log(ps);      //[p, p, p]
+</code></pre></div><ol start="4"><li>节点的属性 nodeName nodeValue nodeType</li></ol> <div class="language- extra-class"><pre class="language-text"><code>   var x=document;
+   console.log(x.nodeName,x.nodeValue,x.nodeType);
+
+var x=document.getElementsByTagName('body')[0];
+   console.log(x.nodeName,x.nodeValue,x.nodeType)
+
+   var x=document.getElementById('box');
+   attributes 用来保存节点的属性的集合(伪数组)
+ console.log(x.attributes[1].nodeName,x.attributes[1].nodeValue,x.attributes[1].nodeType);
+
+   var x=document.querySelector(&quot;#box .li p&quot;).firstChild;
+   console.log(x.nodeName,x.nodeValue,x.nodeType)
+
+   var node=document.querySelector('body').firstChild;
+   console.log(node.nodeName,node.nodeValue,node.nodeType);
+</code></pre></div><table><thead><tr><th>----</th> <th>nodeName</th> <th>nodeValue</th> <th>nodeType</th></tr></thead> <tbody><tr><td>元素节点</td> <td>大写的标签名</td> <td>null</td> <td>1</td></tr> <tr><td>属性节点</td> <td>属性名</td> <td>属性值</td> <td>2</td></tr> <tr><td>文本节点</td> <td>#text</td> <td>文本内容</td> <td>3</td></tr> <tr><td>注释节点</td> <td>#comment</td> <td>注释内容</td> <td>8</td></tr> <tr><td>文档节点</td> <td>#document</td> <td>null</td> <td>9</td></tr></tbody></table> <ol start="5"><li><p>四个节点属性</p></li> <li><p>firstChild  获取第一个子节点</p></li> <li><p>lastChild   获取最后一个子节点</p></li> <li><p>nextSibling 获取下一个兄弟节点</p></li> <li><p>PreviousSibling 获取上一个兄弟节点</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>var box=document.getElementById('box');
+</code></pre></div><p>firstChild == &gt;  dom元素.firstChild     element 在该方法中添加element 解决兼容问题</p> <div class="language- extra-class"><pre class="language-text"><code>	console.log(box.firstElementChild);      获取box下的第一个子元素节点
+</code></pre></div><p>lastChild ==&gt;  dom元素.lastChild      element 在该方法中添加element 解决兼容问题</p> <div class="language- extra-class"><pre class="language-text"><code>    console.log(box.lastElementChild);       获取box下的最后一个子元素节点                                          
+</code></pre></div><p>nextSbiling ==&gt; 获取dom元素下一个兄弟节点   dom元素.nextsbiling</p> <div class="language- extra-class"><pre class="language-text"><code>    var li2=document.getElementById('li2');
+    console.log(li2.nextElementSibling);
+</code></pre></div><p>previousSibling ==&gt;获取dom元素上一个兄弟节点 dom元素.previousSibling</p> <div class="language- extra-class"><pre class="language-text"><code>    console.log(li2.previousElementSibling);
+</code></pre></div><p>childNodes  children  节点的默认属性  默认保存着节点的子节点(伪数组)</p> <div class="language- extra-class"><pre class="language-text"><code>            var box=document.querySelector('#box');
+       childNodes 保存着节点的所有子节点
+            console.log(box.childNodes);//[text, p, text, p, text, p, text]
+
+       children 保存着节点的所有子元素节点
+            console.log(box.children);
+</code></pre></div><p>parentNode dom元素.parentNode 查找dom元素的父节点</p> <div class="language- extra-class"><pre class="language-text"><code>            console.log(box.parentNode);
+</code></pre></div><h3 id="css属性与html属性操作"><a href="#css属性与html属性操作" aria-hidden="true" class="header-anchor">#</a> css属性与HTML属性操作</h3> <ol><li>标签为文本内容默认字符串</li></ol> <ul><li>style属性 ==&gt; 给节点设置或获取样式 只能获取或设置行内样式 一次设置一个样式
+<ul><li>语法格式: 节点.style.样式名=样式值;    样式名(驼峰写法)</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>    box.style.backgroundColor='skyblue';
+    box.style.fontSize='20px';
+</code></pre></div><ul><li>cssText 一次设置多个样式 只能获取或设置行内样式
+<ul><li>语法格式: 节点.style.cssText='样式名1:样式值1;样式名2:样式值2;...';</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>	box.style.cssText='width:500px;height:500px;background:red;font-size:30px';
+    var x=box.style.cssText;
+    console.log(x)
+</code></pre></div><ul><li>className属性 给节点设置或获取类名    返回结果为字符串
+<ul><li>节点.className='类名';</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>    var x=box.className;
+</code></pre></div><ul><li>classList属性  增加 删除 查找类名   返回结果为类数组</li></ul> <p>节点.classList.add(增加的类名1,增加的类名2...);</p> <div class="language- extra-class"><pre class="language-text"><code>    box.classList.add('qwer','df','dasdas');
+</code></pre></div><p>节点.classList.remove(删除项1,删除项2...);</p> <div class="language- extra-class"><pre class="language-text"><code>	var x=box.classList.remove('xxxx');
+</code></pre></div><p>节点.classList.contains(要查找项);
+如果查找到该类名返回true  找不到该类名返回false</p> <div class="language- extra-class"><pre class="language-text"><code>    var x=box.classList.contains('xxx');
+</code></pre></div><p>节点.classList.item(下标值); 返回相应下标的类名</p> <div class="language- extra-class"><pre class="language-text"><code>    var x=box.classList.item(4);
+</code></pre></div><ol start="2"><li>操作属性</li></ol> <ul><li>getAttribute() 获取属性
+<ul><li>语法结构</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>    节点.getAttribute(要获取的属性名); 返回值为相应的属性值 查找不到返回null
+	var x=box.getAttribute('name');
+    console.log(x)
+</code></pre></div><ul><li>setAttribute 设置属性
+<ul><li>语法结构</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>   节点.setAttribute(要设置的属性名,要设置的属性值); 返回undefined
+</code></pre></div><ul><li>removeAttribute() 删除属性
+<ul><li>语句结构</li></ul></li></ul> <div class="language- extra-class"><pre class="language-text"><code>   节点.removeAttribute(要删除的属性);
+   box.removeAttribute('class');
+</code></pre></div><ul><li>attributes==&gt; 默认保存着节点的属性集合==&gt;伪数组形式</li></ul> <div class="language- extra-class"><pre class="language-text"><code>  console.log(box.attributes[1])
+</code></pre></div><ol start="3"><li>写入方法</li></ol> <ul><li>innerHTML 给标签设置或获取  文本内容或标签</li> <li>innerText 给标签设置或获取  文本内容</li></ul> <ol start="4"><li>创建元素和创建文本内容</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	document.createElement('要创建的元素名');
+	    返回值为创建的元素
+	/*var node=document.createElement('div');
+	console.log(node);*/
+
+	document.createTextNode('文本内容');
+	     返回值为创建的文本内容
+	/*var text=document.createTextNode(&quot;大街上的考拉上来讲&quot;,);
+	console.log(text);*/
+</code></pre></div><ol start="5"><li>追加节点</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	父元素.appendChild(要追加的节点)
+	/*var node=document.createTextNode('dajdlksaj');
+	box.appendChild(node);*/
+</code></pre></div><ol start="6"><li>插入节点</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	父元素.insertBefore(要插入的节点,要插入的位置);
+	/*var node=document.createElement('em');
+	box.insertBefore(node,box.children[1]);
+*/
+</code></pre></div><ol start="7"><li>删除节点</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	父元素.removeChild(被删除的节点);
+	//box.removeChild(box.children[1]);
+</code></pre></div><ol start="8"><li>替换节点</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	父元素.replaceChild(新节点,被替换节点);
+	/*var node=document.createElement('strong');
+	box.replaceChild(node,box.children[2]);*/
+</code></pre></div><h3 id="html级事件模型-内联模型"><a href="#html级事件模型-内联模型" aria-hidden="true" class="header-anchor">#</a> HTML级事件模型 (内联模型)</h3> <div class="language- extra-class"><pre class="language-text"><code>&lt;button id=&quot;box&quot;onclick=&quot;alert(1)&quot;&gt;点我&lt;/button&gt;
+	&lt;div id=&quot;btn&quot;&gt;点我&lt;/div&gt;
+	&lt;input type=&quot;text&quot; id=&quot;ipt&quot;&gt;
+</code></pre></div><ol><li>DOM 0级事件 让你的html具有某些效果 触发效果后 做一些操作</li></ol> <div class="language- extra-class"><pre class="language-text"><code>var btn=document.getElementById('btn');
+	节点.on+'事件名'=function(){
+							  }
+
+节点.on+&quot;事件名&quot;=function(){
+		//执行函数;
+		fn(1,2);
+	      }
+
+	function fn(a,b){}
+	节点.on+&quot;事件名&quot; = fn;
+	function fn(){}
+</code></pre></div><ol start="2"><li><p>鼠标事件: click单击 dblclick双击 mousedown按下 mouseup抬起 mouseout移出 mouseover移入
+mousemove移动</p></li> <li><p>焦点事件: blur失去焦点 focus获得焦点</p></li> <li><p>键盘事件 keydown按下 keyup抬起 keypress</p></li> <li><p>UI事件:change失去焦点并改变内容</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>	var ipt=document.getElementById('ipt');
+	var i=1;
+	ipt.onchange=function(){
+		console.log(++i)
+						  }
+</code></pre></div><h3 id="对象-类数组-方便操作数据"><a href="#对象-类数组-方便操作数据" aria-hidden="true" class="header-anchor">#</a> 对象 类数组 方便操作数据</h3> <ol><li>对象的创建</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	var obj={}  //对象字面量
+	var obj=new Object();//构造函数创建对象
+</code></pre></div><p>在对象中 		基本类型被称为对象的属性
+复杂类型被称为对象的方法</p> <div class="language- extra-class"><pre class="language-text"><code>/*	var obj={
+		name:'哈哈',   //键值对  
+		age:18,
+		sex:'',
+		fn:function(){
+			console.log(123);
+			return 1;
+					 }
+	}
+	console.log(obj.fn())*/
+</code></pre></div><ol start="2"><li>动态的去创建属性</li></ol> <div class="language- extra-class"><pre class="language-text"><code>/*var obj={};
+obj.kg='75kg';
+obj.cm='260cm';
+obj.mm='26000mm';
+
+obj.fn=function(){
+	alert(123);
+				}
+
+console.log(obj.fn());*/
+</code></pre></div><ul><li>通过id获取元素方法的封装(byId)</li></ul> <div class="language- extra-class"><pre class="language-text"><code>function $(id){
+	return document.getElementById(id);
+			  }
+</code></pre></div><ul><li>判断DOM元素上是否有某个类(hasClass)</li></ul> <div class="language- extra-class"><pre class="language-text"><code>/*var box=$('box');
+function hasClass(node,val){
+	//将 节点的类名通过空格转数组
+	var arr=node.className.split(' ');
+	for(var i=0; i&lt;arr.length;i++){
+		if(val==arr[i]){
+			return true;
+			 }
+				   }
+		return false;
+		}
+console.log(hasClass(box,'six'));*/
+</code></pre></div><ul><li>添加类方法的封装(addClass)</li></ul> <div class="language- extra-class"><pre class="language-text"><code>/*var box=$('box');
+function addClass(node,val){
+	//将 节点的类名通过空格转数组
+	var arr=node.className.split(' '),
+		flag=false;
+	for(var i=0; i&lt;arr.length;i++){
+		if(val==arr[i]){
+			flag=true;
+			 }
+				   }
+	if(!flag){node.className+=' '+val}
+
+		
+					}
+addClass(box,'seven');*/
+</code></pre></div><h3 id="定时器-属于bom对象-window对象"><a href="#定时器-属于bom对象-window对象" aria-hidden="true" class="header-anchor">#</a> 定时器 属于bom对象==&gt; window对象</h3> <ol><li>间歇调用</li></ol> <ul><li>setInterval(要执行的内容(函数),间隔时间ms)</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	var i=0;
+setInterval(function(){
+		console.log(++i)
+	},1000);
+
+
+	var timer=setInterval(fn,1000);
+	function fn(){
+		console.log(++i)
+	}	
+
+
+	 setInterval(&quot;fn('xyz')&quot;,1000);
+	 function fn(a){
+		console.log(a);
+	 			 }
+</code></pre></div><ul><li>clearInterval(定时器的返回值) 清除定时器</li></ul> <div class="language- extra-class"><pre class="language-text"><code>	var timer=null,i=0;  //定义变量 用来保存定时器返回值
+	btn1.onclick=function(){	
+		timer=setInterval(function(){
+			console.log(++i);
+		},1000);
+							}	
+
+	btn2.onclick=function(){
+		clearInterval(timer);
+						 }
+</code></pre></div><ol start="2"><li>超时调用 setTimeout(执行代码,间隔时间) 只执行一次</li> <li>清除超时调用 clearTimeout</li></ol> <h4 id="o-name-o-name"><a href="#o-name-o-name" aria-hidden="true" class="header-anchor">#</a> o.name ==&gt; o[&quot;name&quot;]</h4> <div class="language- extra-class"><pre class="language-text"><code>		function getStyle( obj , styleName ){
+		 	if( obj.currentStyle ){//IE浏览器下获取DOM元素的样式
+		 		return obj.currentStyle[styleName];
+		 	}else{
+				return getComputedStyle(obj,null)[styleName];
+// 非IE浏览器下获取DOM元素的样式
+		 	}
+		}
+
+		 getStyle( box , &quot;width&quot; );
+</code></pre></div><p>IE浏览器下获取DOM元素的样式</p> <div class="language- extra-class"><pre class="language-text"><code>dom元素.currentStyle.styleName
+</code></pre></div><p>非IE浏览器下获取DOM元素的样式</p> <div class="language- extra-class"><pre class="language-text"><code>		var box=document.getElementById('box');
+		 	console.log(getComputedStyle(box,'sdsa').width);
+		 	getComputedStyle( dom对象 , null).styleName;
+</code></pre></div><ol><li><p>和style的区别:</p> <ul><li>style可以设置或获取样式 但是getComputedStyle只能获取</li> <li>style只能获取或者设置行内样式 getComputedStyle可以获取行内、内嵌、外联</li></ul></li> <li><p>offset... 返回值都是数值 (不带单位)</p></li></ol> <div class="language- extra-class"><pre class="language-text"><code>		 div: width:100px boder-left:2px padding:3px margin:4px;
+		 offsetWidth ==&gt; width+ border + padding  108
+	      offsetHeight==&gt; height + border + padding  6
+	      offsetLeft ==&gt; left + margin-left   30
+		 offsetTop ==&gt; top + margin-top   0
+</code></pre></div><ol start="3"><li>scrollTop ==&gt; 返回滚动条距离顶部位置</li></ol> <div class="language- extra-class"><pre class="language-text"><code>	document.body.scrollTop||document.documentElement.scrollTop
+	console.log(document.documentElement.scrollTop);
+</code></pre></div><h1 id="bom"><a href="#bom" aria-hidden="true" class="header-anchor">#</a> BOM</h1> <ol><li>BOM是什么？浏览器对象模型
+<ul><li>broswer object model</li></ul></li> <li>window对象
+<ul><li>在全局作用域下定义的变量被当做window下的属性</li> <li>在全局作用域下定义的函数被当做window下的方法</li></ul></li></ol> <div class="language- extra-class"><pre class="language-text"><code>/*	var a=1;
+	console.log(a);
+	console.log(window.a);
+	function fn(){
+		console.log(123456);
+
+	}
+window.fn();*/
+</code></pre></div><ol start="3"><li>location() ==&gt;</li></ol> <ul><li>search 路径中?及以后的内容</li> <li>hash #及以后的内容</li> <li>href 完整路径</li></ul> <ol start="4"><li>iframe()
+iframe的优点是重载页面时不需要重载整个页面，只需要重载页面中的一个框架页（减少数据的传输，减少网页的加载时间)</li></ol> <ul><li>open() 打开</li> <li>close()</li> <li>navigator() 保存浏览器信息</li> <li>navigator.userAgent 返回浏览器头部信息</li> <li>history() 保存浏览器历史记录
+<ul><li>history(0) 刷新页面</li> <li>history(1) 往下一页</li> <li>history(-1) 往上一页</li></ul></li></ul></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/jasonandjay/study/edit/master/src/zh/bwbj/jsup.md" target="_blank" rel="noopener noreferrer">帮助我们改进内容</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></div> <!----> <div class="bsa-cpc-wrapper"><div class="bsa-cpc"></div></div></div> <!----></div></div>
+    <script src="/study/assets/js/app.0fae91fa.js" defer></script><script src="/study/assets/js/23.17305bc1.js" defer></script>
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c3446600de53c605ba4f6c792e47dff9";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
+</html>
