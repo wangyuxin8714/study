@@ -46,7 +46,7 @@ module.exports = {
           {
             text: '算法',
             items: [
-              { text: '编程基本功', link: '/zh/algorithm/Charpter4.md'},
+              // { text: '编程基本功', link: '/zh/algorithm/Charpter4.md'},
               { text: '数学趣题(一)', link: '/zh/algorithm/Charpter5.md'},
               { text: '数学趣题(二)', link: '/zh/algorithm/Charpter6.md'}
             ],
@@ -71,12 +71,12 @@ module.exports = {
           //     { text: '龙湖地产', link: '/zh/interview/longhu.md'}
           //   ]
           // },
-          // {
-          //   text: '问题总结',
-          //   items: [
-          //     { text: 'canvas', link: '/zh/ProblemList/canvas.md'},
-          //   ]
-          // },
+          {
+            text: '问题总结',
+            items: [
+              { text: '嵌套页面', link: '/zh/ProblemList/NestPage.md'},
+            ]
+          },
           {
             text: '知识点笔记',
             items: [
@@ -91,6 +91,8 @@ module.exports = {
               { text: 'jsx', link: '/zh/jsx/jsx.md'},
               { text: 'js', link: '/zh/bwbj/jsup.md'},
               { text: 'Hybrid APP混合开发', link: '/zh/wsummarize/hybrid.md'},
+              { text: 'svn', link: '/zh/ProblemList/svn.md'},
+              { text: 'git', link: '/zh/ProblemList/git.md'},
             ]
           },
           // {
