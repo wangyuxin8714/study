@@ -75,6 +75,8 @@ module.exports = {
             text: '问题总结',
             items: [
               { text: '嵌套页面', link: '/zh/ProblemList/NestPage.md'},
+              { text: '代码雨', link: '/zh/ProblemList/CodeTheRain.md'},
+              { text: '对象的查找', link: '/zh/ProblemList/dsquery.md'},
             ]
           },
           {
